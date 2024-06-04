@@ -1,8 +1,5 @@
 <script>
-	import { Hero, SlidingText } from '$lib';
-	import { PUBLIC_DEPLOY_ENV } from '$env/static/public';
-
-	console.log(PUBLIC_DEPLOY_ENV);
+	import { Hero } from '$lib';
 </script>
 
 <div class="flex flex-col rounded-badge bg-base-100 px-4 py-8 md:px-8 md:py-16">
@@ -20,4 +17,3 @@
 		>
 	</div>
 </div>
-<SlidingText spanProps="text-primary-content">testing·</SlidingText>
