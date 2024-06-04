@@ -2,7 +2,7 @@
 	import { constants } from '$lib';
 </script>
 
-<div class="h-screen flex justify-center items-center">
+<div class="flex h-screen items-center justify-center">
 	<div class="card w-96 bg-primary shadow-xl">
 		<div class="flex flex-col items-center pb-4">
 			<div class="avatar mt-4">
@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<h1 class="mt-4 text-xl font-medium">Jeff Ng</h1>
-			<div class="flex mt-4 space-x-3 rtl:space-x-reverse md:mt-6">
+			<div class="mt-4 flex space-x-3 md:mt-6 rtl:space-x-reverse">
 				<span class="text-sm text-gray-500">artist ·</span>
 				<span class="text-sm text-gray-500">software engineer</span>
 				<span class="text-sm text-gray-500">· human</span>
@@ -19,12 +19,12 @@
 
 			<div class="mt-8 grid grid-rows-none gap-2">
 				{#each Object.entries(constants.socialMediaLinks) as [title, socialMediaLink]}
-					<a class="btn btn-accent btn-wide" href={socialMediaLink}>{title}</a>
+					<a class="btn btn-secondary btn-wide" href={socialMediaLink}>{title}</a>
 				{/each}
 			</div>
-			<div class="flex mt-4 space-x-3 rtl:space-x-reverse md:mt-6">
-				<a class="btn btn-secondary" href="./">See my website</a>
-				<a class="btn btn-outline btn-secondary dark:text-white" href="mailto:50jeffng@gmail.com"
+			<div class="mt-4 flex space-x-3 md:mt-6 rtl:space-x-reverse">
+				<a class="btn btn-accent" href="./">See my website</a>
+				<a class="btn btn-outline btn-accent dark:text-white" href="mailto:50jeffng@gmail.com"
 					>Mail me</a
 				>
 			</div>
