@@ -1,8 +1,8 @@
 <script>
 	import { Hero, SlidingText } from '$lib';
-	import { DEPLOY_ENV } from '$env/static/private';
+	import { PUBLIC_DEPLOY_ENV } from '$env/static/public';
 
-	console.log(DEPLOY_ENV);
+	console.log(PUBLIC_DEPLOY_ENV);
 </script>
 
 <div class="flex flex-col rounded-badge bg-base-100 px-4 py-8 md:px-8 md:py-16">
