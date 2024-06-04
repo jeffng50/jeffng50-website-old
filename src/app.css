@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.slide-backwards {
+		display: flex;
+		animation: scroll 20s linear infinite;
+	}
+	.slide-backwards:hover {
+		animation-play-state: paused;
+	}
+
+	.slide-forwards {
+		display: flex;
+		animation: scroll 20s linear infinite;
+		animation-direction: reverse;
+	}
+	.slide-forwards:hover {
+		animation-play-state: paused;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translate(-50%);
+		}
+	}
+}
