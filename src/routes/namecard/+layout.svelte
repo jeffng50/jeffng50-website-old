@@ -2,6 +2,6 @@
 	import '../../app.css';
 </script>
 
-<main class="font-msgothic">
+<main class="bg-base-100 font-msgothic">
 	<slot></slot>
 </main>
