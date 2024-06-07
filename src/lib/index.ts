@@ -5,5 +5,6 @@ export { default as Navbar } from './components/Navbar.svelte';
 export { default as Footer } from './components/Footer.svelte';
 export { default as Hero } from './components/Hero.svelte';
 export { default as SlidingText } from './components/SlidingText.svelte';
+export { default as Modal } from './components/Modal.svelte';
 export * from './utils/store';
 export * from './utils/type';
