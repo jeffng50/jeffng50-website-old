@@ -2,7 +2,9 @@
 	import { Hero } from '$lib';
 </script>
 
-<div class="flex flex-col rounded-badge bg-base-100 px-4 py-8 md:px-8 md:py-16">
+<div
+	class="flex flex-col items-center justify-center rounded-badge bg-base-100 px-4 py-8 md:px-8 md:py-16"
+>
 	<Hero />
 	<div class="divider"></div>
 	<div class="prose text-center">

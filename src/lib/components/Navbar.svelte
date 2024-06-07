@@ -2,10 +2,10 @@
 	import { isDark, constants } from '$lib';
 </script>
 
-<div class="navbar pt-8 lg:h-48 text-sm bg-primary text-primary-content">
+<div class="navbar bg-primary pt-8 text-sm text-primary-content lg:h-48">
 	<div class="navbar-start px-2 lg:px-16">
-		<div class="flex lg:hidden dropdown">
-			<div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+		<div class="dropdown flex lg:hidden">
+			<div tabindex="0" role="button" class="btn btn-circle btn-ghost">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-5 w-5"
@@ -20,19 +20,21 @@
 					/></svg
 				>
 			</div>
-			<ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+			<ul
+				class="menu dropdown-content menu-sm z-[1] mt-3 flex w-52 flex-col gap-8 rounded-box bg-base-100 p-2 shadow"
+			>
 				{#each Object.entries(constants.navbarLinks) as [title, navbarLink], index}
-					<li><a href={navbarLink}>{title}</a></li>
+					<li><a class="btn btn-primary" href={navbarLink}>{title}</a></li>
 				{/each}
 			</ul>
 		</div>
 	</div>
 	<div class="navbar-center">
 		<div class="flex lg:hidden">
-			<div class="flex justify-center items-center text-lg"><span>Jeff Ng</span></div>
+			<div class="flex items-center justify-center text-lg"><span>Jeff Ng</span></div>
 		</div>
-		<div class="hidden lg:flex flex-col gap-8">
-			<div class="flex justify-center items-center text-2xl"><span>Jeff Ng</span></div>
+		<div class="hidden flex-col gap-8 lg:flex">
+			<div class="flex items-center justify-center text-2xl"><span>Jeff Ng</span></div>
 			<ul class="menu menu-horizontal px-4">
 				{#each Object.entries(constants.navbarLinks) as [title, navbarLink], index}
 					<li><a href={navbarLink}>{title}</a></li>
@@ -49,7 +51,7 @@
 			checked={$isDark}
 			on:change={isDark.toggle}
 			value="mythemedark"
-			class="toggle theme-controller"
+			class="theme-controller toggle"
 		/>
 	</div>
 </div>

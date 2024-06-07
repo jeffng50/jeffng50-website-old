@@ -25,6 +25,8 @@
 		<slot />
 		<hr />
 		<!-- svelte-ignore a11y-autofocus -->
-		<button class="btn rounded-none" autofocus on:click={closeDialogFunc}>{closeText}</button>
+		<button class="btn btn-primary rounded-none" autofocus on:click={closeDialogFunc}
+			>{closeText}</button
+		>
 	</div>
 </dialog>
