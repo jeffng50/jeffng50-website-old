@@ -7,7 +7,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['"Open Sans"'],
-				msgothic: ['"MS Gothic"']
+				gothic: ['DotGothic16']
 			}
 		}
 	},
@@ -52,7 +52,7 @@ export default {
 
 					'error-content': '#160000',
 
-					fontFamily: ["'Open Sans'", 'msgothic']
+					fontFamily: ["'Open Sans'", 'DotGothic16']
 				}
 			},
 			{
@@ -93,7 +93,7 @@ export default {
 
 					'error-content': '#160000',
 
-					fontFamily: ["'Open Sans'", 'msgothic']
+					fontFamily: ["'Open Sans'", 'DotGothic16']
 				}
 			}
 		]

@@ -1,8 +1,14 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { constants, Modal } from '$lib';
 
 	let showModal: boolean = false;
-	const memeAudio = new Audio('/audio/sad_hampster_violin_meme.mp3');
+	let memeAudio: HTMLAudioElement;
+
+	onMount(() => {
+		memeAudio = new Audio('/audio/sad_hampster_violin_meme.mp3');
+	});
+
 	const showModalFunc = () => {
 		showModal = true;
 		memeAudio.play();
@@ -13,7 +19,7 @@
 	};
 </script>
 
-<div class="flex h-screen flex-col items-center justify-center">
+<div class="flex h-screen flex-col items-center justify-center font-gothic">
 	<div class="card w-72 bg-primary shadow-xl md:w-96">
 		<div class="flex flex-col items-center pb-4">
 			<div class="avatar mt-4">

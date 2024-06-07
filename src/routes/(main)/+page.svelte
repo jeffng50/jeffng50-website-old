@@ -5,15 +5,17 @@
 <div class="flex flex-col rounded-badge bg-base-100 px-4 py-8 md:px-8 md:py-16">
 	<Hero />
 	<div class="divider"></div>
-	<div class="text-center">
-		<span
-			>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-			been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-			galley of type and scrambled it to make a type specimen book. It has survived not only five
-			centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-			was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-			passages, and more recently with desktop publishing software like Aldus PageMaker including
-			versions of Lorem Ipsum.</span
-		>
+	<div class="prose text-center">
+		<h2>If you're interested</h2>
+		<h3>in like my skills or me generally *blushes*</h3>
+		<p>
+			like just tell me, yeah just that. For example, you can approach me wanting to make a website,
+			commission art (prob not because i'm super new), or just hang out. I am super down to boothing
+			so if any of y'all need a helper and comfortable with me helping do 100% tell me. Also I want
+			to make some new friends, as being an adult, it's super duper hard to make friends, and I'm
+			always up to broaden my social circle, like I really need more friends T^T thanks for reading
+			so far and if you're reading this, might as well just reach out to me as I guess you're
+			interested? hehe
+		</p>
 	</div>
 </div>
