@@ -12,8 +12,6 @@
 
 {#if PUBLIC_DEPLOY_ENV == 'staging'}
 	<SlidingText spanProps="text-primary-content">testing·</SlidingText>
-{:else if PUBLIC_DEPLOY_ENV == 'production'}
-	<SlidingText spanProps="text-primary-content" wordLength={4}>under construction·</SlidingText>
 {/if}
 
 <Footer />

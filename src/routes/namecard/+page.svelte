@@ -19,7 +19,7 @@
 	};
 </script>
 
-<div class="flex h-screen flex-col items-center justify-center font-gothic">
+<div class="flex h-screen flex-col items-center justify-center">
 	<div class="card w-72 bg-primary shadow-xl md:w-96">
 		<div class="flex flex-col items-center pb-4">
 			<div class="avatar mt-4">
