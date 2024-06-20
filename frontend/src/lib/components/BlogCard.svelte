@@ -8,10 +8,10 @@
 	export let slug: string;
 </script>
 
-<a class="card w-96 bg-base-100 shadow-xl" href={`/blog/article/${slug}`}>
+<a class="card bg-base-100 h-96 shadow-xl lg:w-96" href={`/blog/article/${slug}`}>
 	{#if imgUrl != undefined}
 		<figure>
-			<img src={imgUrl} alt="Cover for ${title}" />
+			<img class="w-full bg-cover" src={imgUrl} alt="Cover for ${title}" />
 		</figure>
 	{/if}
 	<div class="card-body">

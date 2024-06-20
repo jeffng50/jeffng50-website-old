@@ -7,6 +7,8 @@ export { default as Hero } from './components/Hero.svelte';
 export { default as SlidingText } from './components/SlidingText.svelte';
 export { default as Modal } from './components/Modal.svelte';
 export { default as BlogCard } from './components/BlogCard.svelte';
+export { default as HeadingBreadcrumbs } from './components/HeadingBreadcrumbs.svelte';
+
 export * from './utils/store';
 export * from './utils/type';
 export * from './utils/date';

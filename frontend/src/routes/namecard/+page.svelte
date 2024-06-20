@@ -20,7 +20,7 @@
 </script>
 
 <div class="flex h-screen flex-col items-center justify-center">
-	<div class="card w-72 bg-primary shadow-xl md:w-96">
+	<div class="card bg-primary w-72 shadow-xl md:w-96">
 		<div class="flex flex-col items-center pb-4">
 			<div class="avatar mt-4">
 				<div class="w-24 rounded-full">
@@ -55,9 +55,3 @@
 		</div>
 	</Modal>
 </div>
-
-<style lang="postcss">
-	:global(html) {
-		background-color: theme(colors.red.500);
-	}
-</style>
