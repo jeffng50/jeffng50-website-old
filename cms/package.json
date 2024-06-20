@@ -8,7 +8,7 @@
     "name": "A Strapi developer"
   },
   "scripts": {
-    "build": "strapi build",
+    "build": "strapi build --debug",
     "deploy": "strapi deploy",
     "dev": "strapi develop",
     "start": "strapi start",

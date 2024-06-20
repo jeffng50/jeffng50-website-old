@@ -1,11 +1,15 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
-    "build": {
+    "jeffng50-website-frontend#build": {
+      "dependsOn": ["^build", "jeffng50-website-frontend#check"],
       "outputs": ["dist/**"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
+    },
+    "check": {
+      "dependsOn": ["^check"]
     },
     "dev": {
       "persistent": true,

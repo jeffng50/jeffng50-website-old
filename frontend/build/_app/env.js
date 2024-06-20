@@ -1,0 +1,1 @@
+export const env={"PUBLIC_DEPLOY_ENV":"dev","PUBLIC_STRAPI_URL":"http://127.0.0.1:1337"}

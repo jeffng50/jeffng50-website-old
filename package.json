@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "turbo run check build",
+    "local-cms": "turbo run dev --filter=cms",
+    "build-frontend": "turbo run build --filter=jeffng50-website-frontend",
     "dev": "turbo run dev",
     "lint": "turbo run lint"
   },
