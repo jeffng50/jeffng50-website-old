@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run check build",
     "dev": "turbo run dev",
     "lint": "turbo run lint"
   },
