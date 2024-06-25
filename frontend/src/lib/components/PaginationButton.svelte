@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	export let relativeUrl: string;
+	export let baseUrl: string;
 	export let currentPage: number;
 	export let totalPage: number;
 	$: buttonCount = totalPage > 5 ? 5 : totalPage;
@@ -35,7 +35,7 @@
 	<button
 		class="btn btn-outline mr-4"
 		disabled={currentPage == 1}
-		on:click={async () => goto(`.${relativeUrl}?page=${currentPage - 1}`)}>prev</button
+		on:click={async () => goto(`${baseUrl}/${currentPage - 1}`)}>prev</button
 	>
 	<div class="flex flex-row items-center justify-center gap-2">
 		{#each currentButtons as page, index}
@@ -43,15 +43,15 @@
 				<span>{' ...'}</span>
 			{/if}
 			{#if (firstPage && index == 0) || (!firstPage && index == 1)}
-				<a class="bg-primary" href={`.${relativeUrl}?page=${page}`}>{page}</a>
+				<a class="bg-primary" href={`${baseUrl}/${page}`}>{page}</a>
 			{:else}
-				<a href={`.${relativeUrl}?page=${page}`}>{page}</a>
+				<a href={`${baseUrl}/${page}`}>{page}</a>
 			{/if}
 		{/each}
 	</div>
 	<button
 		class="btn btn-outline ml-4"
 		disabled={currentPage == totalPage}
-		on:click={async () => goto(`.${relativeUrl}?page=${currentPage + 1}`)}>next</button
+		on:click={async () => goto(`${baseUrl}/${currentPage + 1}`)}>next</button
 	>
 </div>
