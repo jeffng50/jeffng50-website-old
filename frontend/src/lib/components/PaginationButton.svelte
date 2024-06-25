@@ -6,7 +6,7 @@
 	$: buttonCount = totalPage > 5 ? 5 : totalPage;
 	$: pageLessThanCount = totalPage < 5;
 	let hasSkipToLastPage = false;
-	let firstPage = false;
+	$: firstPage = currentPage == 1;
 	// assignment allows currentPage to be reactive, thus functional for loop
 	$: currentButtons = Array.from({ length: buttonCount }, (_, i) => {
 		if (currentPage + i - 1 > totalPage) {
@@ -18,7 +18,6 @@
 			return totalPage;
 		}
 		if (currentPage == 1) {
-			firstPage = true;
 			return currentPage + i;
 		}
 		if (i == 0) {
@@ -43,7 +42,8 @@
 				<span>{' ...'}</span>
 			{/if}
 			{#if (firstPage && index == 0) || (!firstPage && index == 1)}
-				<a class="bg-primary" href={`${baseUrl}/${page}`}>{page}</a>
+				<a class="bg-accent text-accent-content bg-opacity-50" href={`${baseUrl}/${page}`}>{page}</a
+				>
 			{:else}
 				<a href={`${baseUrl}/${page}`}>{page}</a>
 			{/if}
