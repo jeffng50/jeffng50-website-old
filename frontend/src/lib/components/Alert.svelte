@@ -28,9 +28,7 @@
 		<IconAlertOutline class="h-6 w-6 shrink-0" />
 	{:else if mode == 'error'}
 		<IconAlertOutline class="h-6 w-6 shrink-0" />
-	{:else}
-		<!-- else content here -->
-	{/if}
+	{:else}<!-- svelte-ignore empty-block -->{/if}
 	<div class="flex flex-col">
 		<span>{title}</span>
 		<span class="text-xs">{description}</span>

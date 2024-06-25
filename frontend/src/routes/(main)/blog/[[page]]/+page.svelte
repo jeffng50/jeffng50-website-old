@@ -20,7 +20,7 @@
 				title="still work in progress"
 				description="you shouldn't be here >:("
 			/>
-			<div class="grid gap-16 md:grid-cols-2 lg:grid-cols-3">
+			<div class="grid gap-16 md:grid-cols-2">
 				{#if posts != undefined}
 					{#each posts as post}
 						<BlogCard

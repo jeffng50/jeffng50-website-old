@@ -8,13 +8,13 @@
 	export let slug: string;
 </script>
 
-<a class="card bg-base-100 h-96 shadow-xl lg:w-96" href={`/blog/article/${slug}`}>
+<a class="card bg-base-100 h-96 w-72 shadow-xl lg:w-96" href={`/blog/article/${slug}`}>
 	{#if imgUrl != undefined}
 		<figure>
 			<img class="w-full bg-cover" src={imgUrl} alt="Cover for ${title}" />
 		</figure>
 	{/if}
-	<div class="card-body">
+	<div class="card-body hyphens-auto">
 		<h2 class="card-title">
 			{title}
 			<div class="badge badge-secondary">NEW</div>
