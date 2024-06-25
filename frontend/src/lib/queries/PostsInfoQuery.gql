@@ -1,5 +1,13 @@
-query PostsInfo {
-	posts {
+query PostsInfo($page: Int! = 1) {
+	posts(pagination: { page: $page, pageSize: 3 }, sort: "publishedAt:desc") {
+		meta {
+			pagination {
+				page
+				pageSize
+				pageCount
+				total
+			}
+		}
 		data {
 			attributes {
 				title
