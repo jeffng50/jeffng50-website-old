@@ -1,0 +1,49 @@
+query PostsInfo($page: Int! = 1) {
+	posts(pagination: { page: $page, pageSize: 4 }, sort: "publishedAt:desc") {
+		meta {
+			pagination {
+				page
+				pageSize
+				pageCount
+				total
+			}
+		}
+		data {
+			attributes {
+				title
+				description
+				content
+				slug
+				cover {
+					data {
+						attributes {
+							url
+						}
+					}
+				}
+				author {
+					data {
+						attributes {
+							name
+							avatar {
+								data {
+									attributes {
+										formats
+									}
+								}
+							}
+						}
+					}
+				}
+				tags {
+					data {
+						attributes {
+							name
+							color
+						}
+					}
+				}
+			}
+		}
+	}
+}

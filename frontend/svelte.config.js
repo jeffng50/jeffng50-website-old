@@ -1,4 +1,3 @@
-import path from 'path';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -18,7 +17,7 @@ const config = {
 		}),
 
 		alias: {
-			$houdini: path.resolve('.', '$houdini')
+			$houdini: './$houdini'
 		}
 	}
 };

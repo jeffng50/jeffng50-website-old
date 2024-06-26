@@ -8,6 +8,8 @@ export { default as SlidingText } from './components/SlidingText.svelte';
 export { default as Modal } from './components/Modal.svelte';
 export { default as BlogCard } from './components/BlogCard.svelte';
 export { default as HeadingBreadcrumbs } from './components/HeadingBreadcrumbs.svelte';
+export { default as PaginationButton } from './components/PaginationButton.svelte';
+export { default as Alert } from './components/Alert.svelte';
 
 export * from './utils/store';
 export * from './utils/type';
