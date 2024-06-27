@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { navigating } from '$app/stores';
 	import { BlogCard, PaginationButton, Alert } from '$lib';
 	import { PUBLIC_STRAPI_URL } from '$env/static/public';
 	/** @type { import('./$houdini').PageData } */
@@ -11,7 +11,7 @@
 </script>
 
 <div class="m-8 flex items-center justify-center">
-	{#if $PostsInfo.fetching}
+	{#if $navigating || $PostsInfo.fetching}
 		<span class="loading loading-ball loading-lg"></span>
 	{:else}
 		<div class="flex flex-col items-center justify-center gap-8">

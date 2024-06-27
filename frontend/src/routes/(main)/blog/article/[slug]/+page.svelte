@@ -3,6 +3,7 @@
 	import { gfmHeadingId } from 'marked-gfm-heading-id';
 	import { PUBLIC_STRAPI_URL } from '$env/static/public';
 	import { dateOptions, HeadingBreadcrumbs } from '$lib';
+	import { navigating } from '$app/stores';
 
 	const regexH2: RegExp = /(?<! )#{2} .+/g;
 
@@ -25,11 +26,11 @@
 	marked.use(gfmHeadingId({ prefix: '##-' }));
 </script>
 
-{#if $PostWithSlug.fetching}
+{#if $navigating || $PostWithSlug.fetching}
 	<span class="loading loading-ball loading-lg"></span>
 {:else}
 	{#if post.content != undefined && headings}
-		<HeadingBreadcrumbs class="hidden">
+		<HeadingBreadcrumbs>
 			<ul>
 				{#each headings as heading}
 					<li>
