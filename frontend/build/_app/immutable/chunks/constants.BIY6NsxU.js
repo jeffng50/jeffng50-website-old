@@ -1,1 +1,0 @@
-const a={facebook:"https://www.facebook.com/jeef.arts/",instagram:"https://www.instagram.com/jeef.arts/"},s={Home:"/",Blog:"/blog",Namecard:"/namecard"},o={socialMediaLinks:a,navbarLinks:s};export{o as c};

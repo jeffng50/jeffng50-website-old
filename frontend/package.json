@@ -45,6 +45,7 @@
     },
     "type": "module",
     "dependencies": {
+        "@sentry/sveltekit": "^8.13.0",
         "marked": "^13.0.0",
         "marked-gfm-heading-id": "^4.0.0"
     }

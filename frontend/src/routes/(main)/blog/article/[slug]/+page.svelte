@@ -2,19 +2,47 @@
 	import { marked } from 'marked';
 	import { gfmHeadingId } from 'marked-gfm-heading-id';
 	import { PUBLIC_STRAPI_URL } from '$env/static/public';
-	import { dateOptions } from '$lib';
+	import { dateOptions, HeadingBreadcrumbs } from '$lib';
+	import { navigating } from '$app/stores';
+
+	const regexH2: RegExp = /(?<! )#{2} .+/g;
 
 	/** @type { import('./$houdini').PageData } */
 	export let data;
 	$: ({ PostWithSlug } = data);
 	$: post = $PostWithSlug?.data?.posts?.data[0]?.attributes;
+	$: headings = post.content.match(regexH2);
+
+	// @ts-ignore
+	const scrollIntoView = ({ target }) => {
+		const el = document.getElementById(target.getAttribute('href'));
+		if (!el) return;
+		el.scrollIntoView({
+			block: 'center',
+			behavior: 'smooth'
+		});
+	};
 
 	marked.use(gfmHeadingId({ prefix: '##-' }));
 </script>
 
-{#if $PostWithSlug.fetching}
+{#if $navigating || $PostWithSlug.fetching}
 	<span class="loading loading-ball loading-lg"></span>
 {:else}
+	{#if post.content != undefined && headings}
+		<HeadingBreadcrumbs>
+			<ul>
+				{#each headings as heading}
+					<li>
+						<a
+							href={`${heading.toLowerCase().split(' ').join('-')}`}
+							on:click|preventDefault={scrollIntoView}>{heading}</a
+						>
+					</li>
+				{/each}
+			</ul>
+		</HeadingBreadcrumbs>
+	{/if}
 	<div class="flex flex-col items-center justify-center">
 		<h1 class="mb-8 text-4xl lg:text-8xl">{post.title}</h1>
 

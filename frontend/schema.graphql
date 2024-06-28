@@ -126,7 +126,30 @@ input FloatFilterInput {
   startsWith: Float
 }
 
-union GenericMorph = Author | I18NLocale | Post | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+union GenericMorph = Author | HomePage | I18NLocale | Post | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+
+type HomePage {
+  body: String
+  createdAt: DateTime
+  publishedAt: DateTime
+  updatedAt: DateTime
+  welcomeMessage: String
+}
+
+type HomePageEntity {
+  attributes: HomePage
+  id: ID
+}
+
+type HomePageEntityResponse {
+  data: HomePageEntity
+}
+
+input HomePageInput {
+  body: String
+  publishedAt: DateTime
+  welcomeMessage: String
+}
 
 type I18NLocale {
   code: String
@@ -255,6 +278,7 @@ type Mutation {
   """Create a new user"""
   createUsersPermissionsUser(data: UsersPermissionsUserInput!): UsersPermissionsUserEntityResponse!
   deleteAuthor(id: ID!): AuthorEntityResponse
+  deleteHomePage: HomePageEntityResponse
   deletePost(id: ID!): PostEntityResponse
   deleteTag(id: ID!): TagEntityResponse
   deleteUploadFile(id: ID!): UploadFileEntityResponse
@@ -284,6 +308,7 @@ type Mutation {
   resetPassword(code: String!, password: String!, passwordConfirmation: String!): UsersPermissionsLoginPayload
   updateAuthor(data: AuthorInput!, id: ID!): AuthorEntityResponse
   updateFileInfo(id: ID!, info: FileInfoInput): UploadFileEntityResponse!
+  updateHomePage(data: HomePageInput!): HomePageEntityResponse
   updatePost(data: PostInput!, id: ID!): PostEntityResponse
   updateTag(data: TagInput!, id: ID!): TagEntityResponse
   updateUploadFile(data: UploadFileInput!, id: ID!): UploadFileEntityResponse
@@ -377,6 +402,7 @@ enum PublicationState {
 type Query {
   author(id: ID): AuthorEntityResponse
   authors(filters: AuthorFiltersInput, pagination: PaginationArg = {}, publicationState: PublicationState = LIVE, sort: [String] = []): AuthorEntityResponseCollection
+  homePage(publicationState: PublicationState = LIVE): HomePageEntityResponse
   i18NLocale(id: ID): I18NLocaleEntityResponse
   i18NLocales(filters: I18NLocaleFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): I18NLocaleEntityResponseCollection
   me: UsersPermissionsMe
