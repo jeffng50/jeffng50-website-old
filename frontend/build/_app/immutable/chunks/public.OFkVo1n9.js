@@ -1,0 +1,1 @@
+(function(){try{var e=typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{},d=new Error().stack;d&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[d]="4d6aae95-40f5-4dbc-9fdc-07102e250bec",e._sentryDebugIdIdentifier="sentry-dbid-4d6aae95-40f5-4dbc-9fdc-07102e250bec")}catch{}})();const t="dev",s="http://127.0.0.1:1337";export{t as P,s as a};
