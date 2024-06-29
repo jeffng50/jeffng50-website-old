@@ -30,28 +30,27 @@
 	}).filter((e) => e != undefined);
 </script>
 
-<div class="flex flex-row">
-	<button
-		class="btn btn-outline mr-4"
-		disabled={currentPage == 1}
-		on:click={async () => goto(`${baseUrl}/${currentPage - 1}`)}>prev</button
-	>
-	<div class="flex flex-row items-center justify-center gap-2">
+<div class="flex">
+	<div class="join">
+		<button
+			class="join-item btn btn-outline"
+			disabled={currentPage == 1}
+			on:click={async () => goto(`${baseUrl}/${currentPage - 1}`)}>prev</button
+		>
 		{#each currentButtons as page, index}
 			{#if hasSkipToLastPage && index + 1 == buttonCount}
-				<span>{' ...'}</span>
+				<button class="join-item btn btn-disabled">{' ...'}</button>
 			{/if}
 			{#if (firstPage && index == 0) || (!firstPage && index == 1)}
-				<a class="bg-accent text-accent-content bg-opacity-50" href={`${baseUrl}/${page}`}>{page}</a
-				>
+				<a class="join-item btn btn-accent" href={`${baseUrl}/${page}`}>{page}</a>
 			{:else}
-				<a href={`${baseUrl}/${page}`}>{page}</a>
+				<a class="join-item btn" href={`${baseUrl}/${page}`}>{page}</a>
 			{/if}
 		{/each}
+		<button
+			class="join-item btn btn-outline"
+			disabled={currentPage == totalPage}
+			on:click={async () => goto(`${baseUrl}/${currentPage + 1}`)}>next</button
+		>
 	</div>
-	<button
-		class="btn btn-outline ml-4"
-		disabled={currentPage == totalPage}
-		on:click={async () => goto(`${baseUrl}/${currentPage + 1}`)}>next</button
-	>
 </div>

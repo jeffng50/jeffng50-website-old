@@ -9,7 +9,8 @@ export default defineConfig({
 		sentrySvelteKit({
 			sourceMapsUploadOptions: {
 				org: 'jeff-ng',
-				project: 'jeffng50-website'
+				project: 'jeffng50-website',
+				authToken: process.env.SENTRY_AUTH_TOKEN
 			}
 		}),
 		houdini(),
