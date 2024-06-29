@@ -18,6 +18,9 @@ const config = {
 
 		alias: {
 			$houdini: './$houdini'
+		},
+		prerender: {
+			handleMissingId: 'warn'
 		}
 	}
 };
