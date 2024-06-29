@@ -29,7 +29,7 @@
 {#if $navigating || $PostWithSlug.fetching}
 	<span class="loading loading-ball loading-lg"></span>
 {:else}
-	{#if post.content != undefined && headings}
+	{#if headings && post?.content != undefined}
 		<HeadingBreadcrumbs>
 			<ul>
 				{#each headings as heading}
