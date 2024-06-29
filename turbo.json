@@ -1,6 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
+    "jeffng50-website-frontend#preview": {
+      "dependsOn": ["^preview", "jeffng50-website-frontend#build"]
+    },
     "jeffng50-website-frontend#build": {
       "dependsOn": ["^build", "jeffng50-website-frontend#check"],
       "outputs": ["dist/**"]

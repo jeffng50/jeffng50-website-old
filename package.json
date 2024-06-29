@@ -5,6 +5,7 @@
   "scripts": {
     "local-cms": "turbo run dev --filter=cms",
     "build-frontend": "turbo run build --filter=jeffng50-website-frontend",
+    "preview": "turbo run preview --filter=jeffng50-website-frontend",
     "dev": "turbo run dev",
     "lint": "turbo run lint"
   },
