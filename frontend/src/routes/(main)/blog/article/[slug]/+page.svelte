@@ -11,7 +11,7 @@
 	export let data;
 	$: ({ PostWithSlug } = data);
 	$: post = $PostWithSlug?.data?.posts?.data[0]?.attributes;
-	$: headings = post.content.match(regexH2);
+	$: headings = post.content?.match(regexH2);
 
 	// @ts-ignore
 	const scrollIntoView = ({ target }) => {
