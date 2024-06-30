@@ -1,0 +1,10 @@
+query HomePage {
+	homePage {
+		data {
+			attributes {
+				welcomeMessage
+				body
+			}
+		}
+	}
+}

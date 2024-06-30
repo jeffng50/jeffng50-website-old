@@ -1,0 +1,1 @@
+import{a as f}from"../chunks/entry.BbRfHpj5.js";(function(){try{var e=typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{},d=new Error().stack;d&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[d]="e6f2aa23-d90e-41a1-9a9c-64df13ca914d",e._sentryDebugIdIdentifier="sentry-dbid-e6f2aa23-d90e-41a1-9a9c-64df13ca914d")}catch{}})();export{f as start};

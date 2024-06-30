@@ -133,7 +133,7 @@ type HomePage {
   createdAt: DateTime
   publishedAt: DateTime
   updatedAt: DateTime
-  welcomeMessage: String
+  welcomeMessage: String!
 }
 
 type HomePageEntity {

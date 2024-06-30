@@ -830,13 +830,14 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     singularName: 'home-page';
     pluralName: 'home-pages';
     displayName: 'Home Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    welcomeMessage: Attribute.Text;
-    body: Attribute.Text;
+    welcomeMessage: Attribute.RichText & Attribute.Required;
+    body: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
